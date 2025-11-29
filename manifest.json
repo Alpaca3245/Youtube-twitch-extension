@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Borderify",
+  "version": "1.0",
+
+  "description": "Placeholder",
+
+  "icons": {
+    "48": "icons/youtube-circle.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/"],
+      "js": ["tempName.js"]
+    }
+  ]
+}
