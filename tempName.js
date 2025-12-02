@@ -1,3 +1,7 @@
+const target = document;
+const config = {childList: true, subtree: true};
+observer.observe(target, config);
+
 const observer = new MutationObserver(function () {
 
       console.log("mutation fired");
@@ -9,7 +13,3 @@ const observer = new MutationObserver(function () {
       }
 });
 
-
-const target = document;
-const config = {childList: true, subtree: true};
-observer.observe(target, config);
