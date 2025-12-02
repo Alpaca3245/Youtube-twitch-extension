@@ -1,8 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "Borderify",
+  "name": "firefox-thing",
   "version": "1.0",
-
+  "permissions": [
+    "activeTab"
+  ],
   "description": "Placeholder",
 
   "icons": {

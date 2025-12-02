@@ -1,9 +1,15 @@
-const section = document.getElementById("sections");
+const observer = new MutationObserver(function () {
 
-observer.observe(section);
+      console.log("mutation fired");
+      console.log("sections exists:", !!document.getElementById('sections'));
 
-const observer = new MutationObserver(() => {
-      console.log("callback that runs when observer is triggered");
+      if (document.getElementById('sections')) {
+            observer.disconnect(); // Stop observing now that #sections exists to prevent further mutation triggers
+            console.log("appending");
+      }
 });
 
 
+const target = document;
+const config = {childList: true, subtree: true};
+observer.observe(target, config);
