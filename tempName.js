@@ -4,16 +4,16 @@ guideSectionRenderer.className = "style-scope ytd-guide-renderer";
 
 // Variable
 const inserted = false;
+const sectionChildrens = 5;
 
 // Observer
 const observer = new MutationObserver(function () {
       console.log("mutation fired");
       console.log("sections children exists:", !!document.getElementById('sections').children[5]);
 
-      if (document.getElementById('sections').children[5] && inserted == false) {
+      if (document.getElementById('sections').children[5] && inserted == false) { // Determined amount of children by inspecting element on the webpage
             observer.disconnect(); // Stop observing now that #sections exists to prevent further mutation triggers
             const sections = document.getElementById('sections');
-            console.log(sections.children[2]);
             sections.insertBefore(guideSectionRenderer, sections.children[2]);
             console.log("appending");
             inserted = true; // to prevent observer from firing more than once
