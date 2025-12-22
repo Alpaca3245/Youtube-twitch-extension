@@ -1,6 +1,12 @@
 // Elements
+const ytdGuideCollapsibleSectionEntryRenderer = document.createElement('ytd-guide-collapsible-section-entry-renderer')
+ytdGuideCollapsibleSectionEntryRenderer.className = "style-scope ytd-guide-section-renderer";
+
 const guideSectionRenderer = document.createElement('ytd-guide-section-renderer');
 guideSectionRenderer.className = "style-scope ytd-guide-renderer";
+
+
+
 
 // Variable
 const inserted = false;
